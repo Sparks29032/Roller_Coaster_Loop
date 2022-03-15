@@ -51,5 +51,5 @@ Here is a sample output given  **R_max = 200 meters**:
 
 ![image](https://user-images.githubusercontent.com/59151395/158488728-07006d7f-e492-4041-978f-45cd8944339e.png)
 
-You may notice that the graph of the initial radius of curvature vs maximum loop height and x vs y coordinates of the loop peak both follow logarithmic relations. 
+You may notice that the graph of the initial radius of curvature vs maximum loop height follows a logarithmic relation. 
 This is an interesting note that bears further investigation. 
