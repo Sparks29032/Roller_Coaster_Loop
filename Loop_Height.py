@@ -124,8 +124,8 @@ sp_2.set_xlabel('Initial Radius of Curvature')
 sp_2.set_ylabel('X-Coordinate of Peak of Loop')
 sp_3.set_aspect('equal', adjustable='box')
 sp_3.set_title('Loops with Different Radii of Curvature')
-sp_3.set_xlabel('X-Coordinate of Maximum Loop Height')
-sp_3.set_ylabel('Y-Coordinate of Maximum Loop Height')
+sp_3.set_xlabel('X-Coordinate of Peak')
+sp_3.set_ylabel('Y-Coordinate of Peak')
 
 # show graph
 plt.show()
