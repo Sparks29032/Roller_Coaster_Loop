@@ -2,7 +2,7 @@ import math
 import matplotlib.pyplot as plt
 import sys
 
-file = open('Loop_Heights.txt', 'w')
+file_1 = open('Loop_Heights.txt', 'w')
 file_2 = open('Loop_Coordinates.txt', 'w')
 
 # initial height
@@ -12,7 +12,7 @@ H = 100.0
 R_max = 200
 
 # used to store R vs h_max
-pts = []
+pts_1 = []
 
 # used to store R vs the x coordinate at h_max
 pts_2 = []
@@ -83,33 +83,49 @@ for R in range(1, R_max + 1, 1):
         vec_len = math.sqrt(vec[0] ** 2 + vec[1] ** 2)
         center = [point[0] - (r / vec_len) * vec[1], point[1] + (r / vec_len) * vec[0]]
 
-    pts.append([R, h_max])
+    # add values to list of points
+    pts_1.append([R, h_max])
     pts_2.append([R, x_max])
-    file.write(str(R) + "," + str(h_max) + "\n")
-    file_2.write(str(x_max) + "," + str(h_max)+ "\n")
+
+    # print the initial radius of curvature vs maximum height
+    file_1.write(str(R) + "," + str(h_max) + "\n")
+
+    # print the horizontal and vertical coordinates of the peak of the loop
+    file_2.write(str(x_max) + "," + str(h_max) + "\n")
+
+    # print the progress left
     print("PROGRESS:", str(R) + "/" + str(R_max))
 
-file.close()
+# close the files
+file_1.close()
 file_2.close()
 
 # compile the horizontal and vertical coordinates
-hori = [pt[0] for pt in pts]
-vert = [pt[1] for pt in pts]
-
+hori_1 = [pt[0] for pt in pts_1]
+vert_1 = [pt[1] for pt in pts_1]
 hori_2 = [pt_2[0] for pt_2 in pts_2]
 vert_2 = [pt_2[1] for pt_2 in pts_2]
 
 # create a graph with equal axes
 fig = plt.figure()
-sp = fig.add_subplot(1, 3, 1)
+sp_1 = fig.add_subplot(1, 3, 1)
 sp_2 = fig.add_subplot(1, 3, 2)
 sp_3 = fig.add_subplot(1, 3, 3)
-sp.plot(hori, vert)
+sp_1.plot(hori_1, vert_1)
 sp_2.plot(hori_2, vert_2)
-sp_3.plot(vert, vert_2)
-sp.set_aspect('equal', adjustable='box')
+sp_3.plot(vert_2, vert_1)
+sp_1.set_aspect('equal', adjustable='box')
+sp_1.set_title('Loop Height vs Initial Radius of Curvature')
+sp_1.set_xlabel('Initial Radius of Curvature')
+sp_1.set_ylabel('Maximum Loop Height')
 sp_2.set_aspect('equal', adjustable='box')
+sp_2.set_title('Peak Distance vs Initial Radius of Curvature')
+sp_2.set_xlabel('Initial Radius of Curvature')
+sp_2.set_ylabel('X-Coordinate of Peak of Loop')
 sp_3.set_aspect('equal', adjustable='box')
+sp_3.set_title('Loops with Different Radii of Curvature')
+sp_3.set_xlabel('X-Coordinate of Maximum Loop Height')
+sp_3.set_ylabel('Y-Coordinate of Maximum Loop Height')
 
 # show graph
 plt.show()
