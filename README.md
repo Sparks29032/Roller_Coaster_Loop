@@ -49,7 +49,7 @@ the x-coordinate of the peak of the loop given the radius of curvature,
 and the x vs y coordinates of the peak of the loop for loops with different inital radii of curvature. 
 Here is a sample output given  **R_max = 200 meters**:
 
-![image](https://user-images.githubusercontent.com/59151395/158488062-257429be-bfca-4c0d-a12a-522676097ede.png)
+![image](https://user-images.githubusercontent.com/59151395/158488728-07006d7f-e492-4041-978f-45cd8944339e.png)
 
 You may notice that the graph of the initial radius of curvature vs maximum loop height and x vs y coordinates of the loop peak both follow logarithmic relations. 
 This is an interesting note that bears further investigation. 
