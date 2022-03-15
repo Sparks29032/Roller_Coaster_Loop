@@ -28,7 +28,7 @@ A little rearranging gives <img src="https://render.githubusercontent.com/render
 Therefore, we have the radius of curvature as a function of height. 
 This restriction is all we need to construct a loop given the initial **H** and **R** conditions. 
 
-### Creating the loop
+### Creating the loop!
 The Loop.py program creates the loop by starting at the bottom (when radius of curvature is **R**) and ensure that at each step, <img src="https://render.githubusercontent.com/render/math?math=r = \frac{R[H - h]}{H}">. 
 Here is a sample output where **H = 100 meters** and **R = 50 meters**:
 
@@ -36,7 +36,7 @@ Here is a sample output where **H = 100 meters** and **R = 50 meters**:
 
 Some interesting combinations of **(H, R)** to try are (100, 0.5), (100, 10), (100, 100), and (100, 200). 
 
-### An interesting note
+### An interesting note...
 In addition to Loop.py, there is also Loop_Height.py. 
 This program creates loops **H = 100 meters** and radii of curvatures ranging from **1 meter** to **R_max meters**, which is currently set to **200 meters** (the increment is **1 meter**). 
 A file Loop_Heights.txt is created to store the maximum height each loop reaches (which is not **H** because if the height reaches **H**, then there cannot be any more kinetic energy, meaning velocity is 0, so the centripetal force is also 0; however, that cannot be as the roller coaster started with some non-zero centripetal force). 
