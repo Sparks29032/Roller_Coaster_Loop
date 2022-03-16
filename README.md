@@ -35,6 +35,7 @@ Here is a sample output where **H = 100 meters** and **R = 50 meters**:
 ![image](https://user-images.githubusercontent.com/59151395/158486058-cfd7e69b-2e12-4441-811a-554c9ce7df8b.png)
 
 Some interesting combinations of **(H, R)** to try are (100, 0.5), (100, 10), (100, 100), and (100, 200). 
+You may notice that these combinations all produce outputs that resemble roller-coaster loops you've seen in real life! 
 
 ### An interesting note...
 In addition to Loop.py, there is also Loop_Height.py. 
