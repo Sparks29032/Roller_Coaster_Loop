@@ -1,6 +1,8 @@
 # Roller coasters
 The goal of this project was to find what shape a roller coaster has to have to provide a constant centripetal force on the rider.  
 
+***Note:*** this file is best viewed in light-mode.
+
 ### What is centripetal force?
 For an object to move in a circle, it must have an inward force applied on it. 
 This is called a "center-seeking" or centripetal force. 
